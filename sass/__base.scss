@@ -1,0 +1,29 @@
+@import'__variables.scss';
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    list-style: none;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    color: $text-color;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+}

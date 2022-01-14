@@ -1,49 +1,106 @@
-.about {
-    background-color: #2B2A33;
-    padding: 10rem 0;
-    font-size: 1.6rem;
-    &__container {
-        max-width: 126rem;
-        margin: 0 auto;
-    }
-    &__thumbnail {
-        padding-right: 2.5rem;
-    }
-    &__inner {
-        padding-left: 2.5rem;
-    }
-    &__tittle {
-        .tittle {
-            font-size: 6rem;
-            color: white;
-        }
-        .description {
-            margin: 2rem 0 2.5rem;
-            font-size: 1.8rem;
-            color: rgba(198, 201, 216, 0.75);
-            font-weight: 400;
-        }
-    }
-    &__nav {
-        display: flex;
-        .item {
-            &__link {
-                text-decoration: none;
-                color: #fff;
-                font-size: 1.9rem;
-                margin-right: 2.2rem;
-                display: inline-block;
-                font-weight: 500;
-            }
-        }
-    }
-}
-
-// this is for the tab 
-[data-tab-content] {
-    display: none;
-}
-
-.active[data-tab-content] {
-    display: block;
-}
+         .about {
+             background-color: #2B2A33;
+             padding: 10rem 0;
+             font-size: 1.6rem;
+             &__container {
+                 max-width: 126rem;
+                 margin: 0 auto;
+             }
+             &__thumbnail {
+                 padding-right: 2.5rem;
+             }
+             &__inner {
+                 padding-left: 2.5rem;
+             }
+             &__tittle {
+                 .tittle {
+                     font-size: 6rem;
+                     color: white;
+                 }
+                 .description {
+                     margin: 2rem 0 2.5rem;
+                     font-size: 1.8rem;
+                     color: rgba(198, 201, 216, 0.75);
+                     font-weight: 400;
+                     span {
+                         color: #F9004D;
+                     }
+                 }
+             }
+             &__nav {
+                 display: flex;
+                 .item {
+                     .link1 {
+                         color: $color-primary-red;
+                         position: relative;
+                         &::after {
+                             position: absolute;
+                             content: '';
+                             height: 2.5px;
+                             width: 100%;
+                             left: 0;
+                             bottom: 0;
+                             background-color: $color-primary-red;
+                         }
+                     }
+                     &__link {
+                         text-decoration: none;
+                         color: #fff;
+                         font-size: 1.9rem;
+                         margin-right: 2.2rem;
+                         display: inline-block;
+                         font-weight: 500;
+                         position: relative;
+                         transition: .3s;
+                         padding: 10px 0;
+                         transform-origin: left;
+                         &::before {
+                             position: absolute;
+                             content: '';
+                             height: 2.5px;
+                             width: 100%;
+                             left: 0;
+                             bottom: 0;
+                             background-color: $color-primary-red;
+                             transform: scaleX(0);
+                             transform-origin: left;
+                             transition: transform .5s ease;
+                         }
+                         &:hover::before {
+                             transform: scaleX(1);
+                         }
+                         &:hover {
+                             color: $color-primary-red;
+                         }
+                     }
+                 }
+             }
+             .tab-content {
+                 color: rgba(198, 201, 216, 0.75);
+                 margin-top: 1rem;
+                 &__nav {
+                     &__item {
+                         .tab-heading {
+                             &:not(:last-child) {
+                                 margin-bottom: 1.5rem;
+                             }
+                             font-weight: 500;
+                             font-size: 1.7rem;
+                             span {
+                                 font-size: 1.5rem;
+                                 font-weight: 400;
+                             }
+                         }
+                     }
+                 }
+             }
+         }
+         
+         // this is for the tab 
+         [data-tab-content] {
+             display: none;
+         }
+         
+         .active[data-tab-content] {
+             display: block;
+         }

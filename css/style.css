@@ -222,10 +222,29 @@ ul {
   font-weight: 400;
 }
 
+.about__tittle .description span {
+  color: #F9004D;
+}
+
 .about__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.about__nav .item .link1 {
+  color: #f9004d;
+  position: relative;
+}
+
+.about__nav .item .link1::after {
+  position: absolute;
+  content: '';
+  height: 2.5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #f9004d;
 }
 
 .about__nav .item__link {
@@ -235,6 +254,58 @@ ul {
   margin-right: 2.2rem;
   display: inline-block;
   font-weight: 500;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+  padding: 10px 0;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.about__nav .item__link::before {
+  position: absolute;
+  content: '';
+  height: 2.5px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: #f9004d;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.about__nav .item__link:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.about__nav .item__link:hover {
+  color: #f9004d;
+}
+
+.about .tab-content {
+  color: rgba(198, 201, 216, 0.75);
+  margin-top: 1rem;
+}
+
+.about .tab-content__nav__item .tab-heading {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+.about .tab-content__nav__item .tab-heading:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.about .tab-content__nav__item .tab-heading span {
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 [data-tab-content] {

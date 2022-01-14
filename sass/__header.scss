@@ -81,3 +81,32 @@ header {
         }
     }
 }
+
+.scrolling-active {
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0, 0, 0, .1);
+    padding: 1rem;
+    transition: .2s;
+    .nav {
+        .left {
+            li {
+                a {
+                    color: black;
+                }
+            }
+        }
+        .right {
+            .icon-list {
+                li {
+                    a {
+                        color: black;
+                    }
+                }
+            }
+            .btn {
+                border: 2px solid black;
+                color: black;
+            }
+        }
+    }
+}

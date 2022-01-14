@@ -13,6 +13,8 @@
 <body>
 
 
+    <!-- header star here  -->
+
     <header>
         <nav class="nav">
             <div class="left">
@@ -40,11 +42,87 @@
     </header>
 
 
+    <!-- header ends here -->
 
-
-    <section class="hero">
-
+    <section class="hero d-flex">
+        <div class="hero__center">
+            <span class="hero__upper-text">FREELANCE GRAPHIC DESIGNER</span>
+            <h1 class="hero__heading-primary">Hi, I’m <span class="hero__red"> Bijon Biswas</span></h1>
+            <h2 class="hero__heading-secondary">based in BD.</h2>
+        </div>
     </section>
+
+
+
+    <!-- about section start here -->
+
+
+    <section class="about">
+        <div class="about__container d-flex">
+            <div class="about__thumbnail">
+                <img src="./img/about-8.jpg" alt="">
+            </div>
+
+            <div class="about__inner">
+                <div class="about__tittle">
+                    <h2 class="tittle">About Me</h2>
+                    <p class="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage
+                        of Lorem Ipsum,</p>
+                </div>
+
+                <div class="about__tab-wrapper">
+                    <ul class="about__nav">
+                        <li class="item">
+                            <a href="#skill" class="item__link  active tab" data-tab-target="#skill">Main Skill</a>
+                        </li>
+                        <li class="item">
+                            <a href="#awards" class="item__link tab" data-tab-target="#awards">Awards</a>
+                        </li>
+                        <li class="item">
+                            <a href="#experience" class="item__link tab" data-tab-target="#experience">Experience</a>
+                        </li>
+                        <li class="item">
+                            <a href="#education" class="item__link tab" data-tab-target="#education">Education & Certification</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="single-tab active" id="skill" data-tab-content>
+                            <ul class="tab-content__nav">
+                                <li class="item">
+
+                                </li>
+                            </ul>
+                            <ul class="tab-content__nav">
+                                <li class="item"></li>
+                            </ul>
+                            <ul class="tab-content__nav">
+                                <li class="item"></li>
+                            </ul>
+                            <ul class="tab-content__nav">
+                                <li class="item"></li>
+                            </ul>
+                        </div>
+                        <div class="single-tab" id="awards" data-tab-content>
+
+                        </div>
+                        <div class="single-tab" id="experience" data-tab-content>
+                        </div>
+                        <div class="single-tab" id="education" data-tab-content>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="./app.js">
+    </script>
 </body>
 
 </html>

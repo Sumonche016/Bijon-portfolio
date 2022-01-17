@@ -192,6 +192,11 @@ ul {
   list-style: none;
 }
 
+.container {
+  max-width: 126rem;
+  margin: 0 auto;
+}
+
 .about {
   background-color: #2B2A33;
   padding: 10rem 0;
@@ -317,17 +322,17 @@ ul {
   display: block;
 }
 
-.tittle {
+.tittle-reuseable {
   text-align: center;
   margin: 1rem 0 6rem 0;
 }
 
-.tittle h1 {
+.tittle-reuseable h1 {
   font-size: 6rem;
   color: #fff;
 }
 
-.tittle p {
+.tittle-reuseable p {
   font-size: 1.6rem;
   color: #c6c9d8;
 }
@@ -351,6 +356,25 @@ ul {
   background-color: black;
   padding: 5rem;
   border-radius: 10px;
+  display: inline-block;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.box:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#F61B14), to(#F00B5E));
+  background-image: linear-gradient(to right, #F61B14, #F00B5E);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  color: #fff;
+}
+
+.box:hover .box__icon {
+  fill: #fff;
+}
+
+.box:hover .box-des {
+  color: #fff;
 }
 
 .box__icon {
@@ -369,5 +393,76 @@ ul {
 .box .box-des {
   font-size: 1.6rem;
   color: #c6c9d8;
+}
+
+.team {
+  background-color: #2B2A33;
+  padding: 10rem 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container .flex-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.container .flex-item img {
+  width: 100%;
+}
+
+.container .flex-item:hover .box-details {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.container .flex-item .box-details {
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 1rem 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: translateY(10rem);
+          transform: translateY(10rem);
+}
+
+.container .flex-item .box-details h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.container .flex-item .box-details span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.container .flex-item .box-details .social-link {
+  margin-top: .5rem;
+}
+
+.container .flex-item .box-details .social-link a {
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.container .flex-item .box-details .social-link a:not(:last-child) {
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=style.css.map */

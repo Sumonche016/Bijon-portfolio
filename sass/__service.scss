@@ -1,4 +1,4 @@
-.tittle {
+.tittle-reuseable {
     text-align: center;
     margin: 1rem 0 6rem 0;
     h1 {
@@ -28,6 +28,19 @@
     background-color: black;
     padding: 5rem;
     border-radius: 10px;
+    display: inline-block;
+    transition: all .3s;
+    &:hover {
+        background-image: linear-gradient(to right, #F61B14, #F00B5E);
+        transform: translateY(-5px);
+        color: #fff;
+    }
+    &:hover &__icon {
+        fill: #fff;
+    }
+    &:hover .box-des {
+        color: #fff;
+    }
     &__icon {
         width: 5rem;
         height: 5rem;

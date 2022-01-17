@@ -1,0 +1,53 @@
+.team {
+    background-color: #2B2A33;
+    padding: 10rem 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    .flex-item {
+        position: relative;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        &:hover .box-details {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        .box-details {
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            padding: 1rem 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: transform .3s;
+            transform: translateY(10rem);
+            h4 {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: #fff;
+            }
+            span {
+                font-size: 1.3rem;
+                font-weight: 500;
+                color: #fff;
+            }
+            .social-link {
+                margin-top: .5rem;
+                a {
+                    font-size: 1.3rem;
+                    color: #fff;
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

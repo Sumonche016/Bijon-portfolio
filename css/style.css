@@ -162,6 +162,7 @@ header nav .right .btn {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -314,5 +315,59 @@ ul {
 
 .active[data-tab-content] {
   display: block;
+}
+
+.tittle {
+  text-align: center;
+  margin: 1rem 0 6rem 0;
+}
+
+.tittle h1 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+.tittle p {
+  font-size: 1.6rem;
+  color: #c6c9d8;
+}
+
+.service {
+  background-color: #101010;
+  padding: 5rem 0;
+}
+
+.service-container {
+  max-width: 126rem;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(39rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(39rem, 1fr));
+  grid-gap: 3rem;
+}
+
+.box {
+  background-color: black;
+  padding: 5rem;
+  border-radius: 10px;
+}
+
+.box__icon {
+  width: 5rem;
+  height: 5rem;
+  fill: #f9004d;
+}
+
+.box .box-tittle {
+  margin: 1rem 0;
+  font-size: 2.4rem;
+  color: white;
+  font-weight: 500;
+}
+
+.box .box-des {
+  font-size: 1.6rem;
+  color: #c6c9d8;
 }
 /*# sourceMappingURL=style.css.map */
